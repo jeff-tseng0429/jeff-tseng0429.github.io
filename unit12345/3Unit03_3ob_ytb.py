@@ -7,8 +7,8 @@ base_options = mp.tasks.BaseOptions('models/efficientdet_lite0.tflite')
 options = mp.tasks.vision.ObjectDetectorOptions(base_options, score_threshold=0.2)
 detector = mp.tasks.vision.ObjectDetector.create_from_options(options)
 
-# video_url = "https://www.youtube.com/watch?v=xr-vlbxXlUA"
-video_url = "https://www.youtube.com/watch?v=XUWjAsajKXg"
+video_url = "https://www.youtube.com/watch?v=xr-vlbxXlUA"
+# video_url = "https://www.youtube.com/watch?v=XUWjAsajKXg"
 ydl_opts = {'format': 'best',  'quiet': True }
 with yt_dlp.YoutubeDL(ydl_opts) as ydl:
     info_dict = ydl.extract_info(video_url, download=False)
