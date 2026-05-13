@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台北食力全開！ - 動漫感部落格</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@400;500;700;900&family=Bungee&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        anime: {
+                            primary: '#FF3E83', // Vibrant Pink
+                            secondary: '#00F0FF', // Cyber Blue
+                            accent: '#FFD700', // Gold
+                            dark: '#0F172A',
+                            surface: '#1E293B',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                        accent: ['Bungee', 'cursive'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'glow': 'glow 2s ease-in-out infinite alternate',
+                        'slide-up': 'slideUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        glow: {
+                            'from': { 'box-shadow': '0 0 5px #FF3E83, 0 0 10px #FF3E83' },
+                            'to': { 'box-shadow': '0 0 20px #FF3E83, 0 0 30px #00F0FF' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0F172A;
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .anime-border {
+            position: relative;
+            border: 3px solid #000;
+            box-shadow: 8px 8px 0px #FF3E83;
+            transition: all 0.2s ease;
+        }
+        .anime-border:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 12px 12px 0px #00F0FF;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #FF3E83, #00F0FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-tag {
+            display: inline-block;
+            background: #FF3E83;
+            color: white;
+            padding: 4px 12px;
+            font-weight: 900;
+            transform: skew(-10deg);
+            margin-bottom: 1rem;
+        }
+        .media-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 1rem;
+            object-fit: cover;
+            display: block;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0F172A; }
+        ::-webkit-scrollbar-thumb { background: #FF3E83; border-radius: 10px; }
+    </style>
+</head>
+<body class="font-body leading-relaxed">
+
+    <!-- Hero Section -->
+    <header class="relative min-h-[80vh] flex flex-col items-center justify-center overflow-hidden pt-12 pb-24 px-4">
+        <!-- Background Elements -->
+        <div class="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-anime-primary rounded-full blur-[100px]"></div>
+            <div class="absolute bottom-10 right-10 w-96 h-96 bg-anime-secondary rounded-full blur-[100px]"></div>
+        </div>
+
+        <!-- Student ID Tag -->
+        <div class="z-20 bg-anime-accent text-black font-accent px-6 py-2 rounded-full mb-8 animate-float shadow-xl">
+            B11208028
+        </div>
+
+        <h1 class="z-20 text-5xl md:text-7xl lg:text-8xl font-black text-center mb-8 animate-slide-up leading-tight">
+            台北 <span class="gradient-text">食力全開！</span>
+        </h1>
+
+        <!-- Banner Image Container -->
+        <div class="z-20 w-full max-w-5xl px-4 animate-slide-up" style="animation-delay: 0.2s">
+            <div class="anime-border overflow-hidden rounded-xl bg-black">
+                <img src='https://opal.google/board/blobs/a3c4c4fd-9ccb-4422-a201-e7022b624073' alt='Taipei Food Banner' class="w-full h-auto transform hover:scale-105 transition duration-700" />
+            </div>
+        </div>
+        
+        <p class="z-20 mt-12 text-xl md:text-2xl font-medium text-slate-300 max-w-3xl text-center italic">
+            「這座城市在深夜裡的霓虹燈火，除了照亮歸途，更多時候是照亮了無數正冒著熱氣的餐盤。」
+        </p>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 space-y-24 pb-32">
+        
+        <!-- Intro Section -->
+        <section class="glass p-8 md:p-12 rounded-3xl animate-slide-up" style="animation-delay: 0.3s">
+            <div class="flex items-start gap-4 mb-6">
+                <div class="w-1 bg-anime-primary h-12"></div>
+                <p class="text-lg md:text-xl text-slate-200">
+                    台北，這座城市在深夜裡的霓虹燈火，除了照亮歸途，更多時候是照亮了無數正冒著熱氣的餐盤。身為一個在台北生活的「食者」，我常覺得台北的餐廳地圖，就像是一部立體的、動態的社會發展史。這裡不只是吃飯的地方，更是一個各種文化流派交互撞擊的實驗場。
+                </p>
+            </div>
+        </section>
+
+        <!-- Section I: Bento Grid Style -->
+        <section>
+            <span class="section-tag">CHAPTER 01</span>
+            <h2 class="text-4xl font-black mb-8 font-display">台北餐廳圖鑑：這座城市到底有多好客？</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="glass p-8 rounded-2xl hover:border-anime-primary transition-colors group">
+                    <div class="text-anime-primary font-accent text-3xl mb-4 group-hover:scale-110 transition-transform">01</div>
+                    <h3 class="text-2xl font-bold mb-4">不只是吃飯，是場冒險！</h3>
+                    <p class="text-slate-400">走在台北，你可能前一分鐘還在米其林星級的雪白桌巾前優雅用餐，後一分鐘就轉進狹窄巷弄，坐在沒招牌卻排隊排到天荒地老的小木凳上吃一碗滷肉飯。</p>
+                </div>
+                
+                <div class="glass p-8 rounded-2xl hover:border-anime-secondary transition-colors group">
+                    <div class="text-anime-secondary font-accent text-3xl mb-4 group-hover:scale-110 transition-transform">02</div>
+                    <h3 class="text-2xl font-bold mb-4">各路流派大集合</h3>
+                    <p class="text-slate-400">這裡的味覺光譜極廣。有代代相傳的「台菜魂」，有隨著大時代遷徙而來的各省名菜，更留有日治時期浸潤出的和食靈魂。</p>
+                </div>
+                
+                <div class="md:col-span-2 glass p-8 rounded-2xl border-l-4 border-anime-accent">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center gap-3">
+                        <span class="p-2 bg-anime-accent rounded text-black text-sm">PRO TIPS</span> 看場合挑食
+                    </h3>
+                    <p class="text-slate-300">台北人對餐廳的選擇，展現了一種細膩的社交邏輯。一個人時，是追求自我感官愉悅的「孤獨美食家」；與姐妹聚會，環境必須要有網美等級的視覺張力；商務應酬要有體面與層次；而到了深夜，那間熟悉的居酒屋則是與好友卸下武裝的避風港。台北，總能精準地接住每一種情緒。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section II: Timeline -->
+        <section class="relative">
+            <span class="section-tag">CHAPTER 02</span>
+            <h2 class="text-4xl font-black mb-12 font-display text-anime-secondary">吃貨穿越時空：台北美食地圖進化論</h2>
+            
+            <div class="space-y-12 border-l-2 border-dashed border-slate-700 ml-4 pl-8">
+                <!-- Point 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-4 h-4 bg-anime-primary rounded-full border-4 border-slate-900"></div>
+                    <h4 class="text-anime-primary font-accent text-xl mb-2">1920s-1950s</h4>
+                    <h3 class="text-2xl font-bold mb-3">阿公阿嬤那個年代</h3>
+                    <p class="text-slate-400">大稻埕的「四大旗亭」——江山樓、蓬萊閣，是當時頂級酒樓的象徵。而在另一面，龍山寺、慈聖宮前的廟口攤販，則是常民百姓的生命力來源。</p>
+                </div>
+                
+                <!-- Point 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-4 h-4 bg-anime-secondary rounded-full border-4 border-slate-900"></div>
+                    <h4 class="text-anime-secondary font-accent text-xl mb-2">1960s-1990s</h4>
+                    <h3 class="text-2xl font-bold mb-3">大雜燴時期</h3>
+                    <p class="text-slate-400">隨國民政府遷台，各省菜系百花齊放。隨後美式速食與日式連鎖店相繼登台，口味開始邁向初步的「全球化」。</p>
+                </div>
+
+                <!-- Point 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-4 h-4 bg-anime-accent rounded-full border-4 border-slate-900"></div>
+                    <h4 class="text-anime-accent font-accent text-xl mb-2">2000s-2010s</h4>
+                    <h3 class="text-2xl font-bold mb-3">部落客與 PTT 的戰國時代</h3>
+                    <p class="text-slate-400">PTT Food 版成為了新一代權威。大家追求「CP 值」，拍照要漂亮。這時候，「食記」演變成了一種大眾消費指南。</p>
+                </div>
+
+                <!-- Point 4 -->
+                <div class="relative">
+                    <div class="absolute -left-[41px] top-0 w-4 h-4 bg-white rounded-full border-4 border-slate-900"></div>
+                    <h4 class="text-white font-accent text-xl mb-2">2018 至今</h4>
+                    <h3 class="text-2xl font-bold mb-3">米其林與短影音時代</h3>
+                    <p class="text-slate-400">米其林指南降臨，台北登上國際競技場。我們尋找美食的方式從長篇博文轉向 15 秒的 IG 限動。視覺導向的推薦讓美食更具商業張力。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section III: Modern Standards -->
+        <section>
+            <div class="bg-gradient-to-br from-indigo-900 to-purple-900 p-10 rounded-[3rem] border-2 border-white/10 shadow-2xl">
+                <span class="section-tag bg-white text-indigo-900">CHAPTER 03</span>
+                <h2 class="text-4xl font-black mb-8 font-display">現在流行這樣吃！目前的「美食大會考」</h2>
+                
+                <div class="space-y-6">
+                    <div class="flex gap-4 items-start">
+                        <div class="bg-anime-primary text-white p-2 rounded-lg font-black shrink-0">儀</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-anime-accent">儀式感至上</h4>
+                            <p class="text-slate-300">吃的不只是飽足，更是心理填補。裝潢要像藝廊、主廚要「說菜」、解釋食材永續理念。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="bg-anime-secondary text-black p-2 rounded-lg font-black shrink-0">星</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Google 4.0 分門檻</h4>
+                            <p class="text-slate-300">低於 4 分自動過濾。數位名聲雖然殘酷，卻最直接反映消費者的真實體感。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="bg-anime-accent text-black p-2 rounded-lg font-black shrink-0">潮</div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">必吃趨勢王</h4>
+                            <p class="text-slate-300">高端燒肉、私廚 Omakase、以及搭配餐酒（Wine Pairing）的新派台菜。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section IV: Controversy - Neobrutalism Style -->
+        <section class="bg-anime-primary/10 border-4 border-anime-primary p-8 rounded-lg">
+            <span class="section-tag">CHAPTER 04</span>
+            <h2 class="text-4xl font-black mb-8 font-display text-anime-primary">避坑指南：愛與愁</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="space-y-4">
+                    <div class="bg-black p-4 border-2 border-white">
+                        <h4 class="font-bold text-anime-primary underline mb-2">好拍不代表好吃</h4>
+                        <p class="text-sm text-slate-300">視覺效果遠大於味覺，當代推薦文化中最大的資訊不對稱。</p>
+                    </div>
+                    <div class="bg-black p-4 border-2 border-white">
+                        <h4 class="font-bold text-anime-primary underline mb-2">五星評價可能是買來的</h4>
+                        <p class="text-sm text-slate-300">「送小菜換五星」讓分數系統產生信度危機，需要學會解讀真實密碼。</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-black p-4 border-2 border-white">
+                        <h4 class="font-bold text-anime-primary underline mb-2">錢包的眼淚</h4>
+                        <p class="text-sm text-slate-300">物價飆漲導致市場 M 型化：極致便宜 vs. 極致奢華。</p>
+                    </div>
+                    <div class="bg-black p-4 border-2 border-white">
+                        <h4 class="font-bold text-anime-primary underline mb-2">觀光口味 vs 在地魂</h4>
+                        <p class="text-sm text-slate-300">米其林推薦有時會將味道「國際化」，是否會因此喪失在地野性？</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section V: Future -->
+        <section>
+            <span class="section-tag">CHAPTER 05</span>
+            <h2 class="text-4xl font-black mb-12 font-display text-anime-secondary italic text-center">FUTURE: 20XX 餐廳預測</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="glass p-6 rounded-xl border-r-4 border-anime-secondary">
+                        <h4 class="font-black text-xl mb-2">AI 訂製化餐點</h4>
+                        <p class="text-slate-400">根據心跳、體溫與健康數據，AI 將精準定製你的專屬營養比例。</p>
+                    </div>
+                    <div class="glass p-6 rounded-xl border-r-4 border-anime-secondary">
+                        <h4 class="font-black text-xl mb-2">沈浸式「玩」餐廳</h4>
+                        <p class="text-slate-400">吃飯不再只是進食，而是參與一齣廢墟改建或光影交織的戲劇。</p>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute inset-0 bg-anime-secondary blur-3xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <div class="relative bg-slate-900 border-2 border-anime-secondary p-8 rounded-2xl transform rotate-3">
+                        <h3 class="text-3xl font-black mb-4">「吃懂」比「吃飽」重要</h3>
+                        <p class="text-slate-300 mb-6">未來的食記將講述品牌故事、烹飪技法與對土地的愛。用餐會變成一種更深層、更有文化的「教育體驗」。</p>
+                        <div class="h-1 w-full bg-anime-secondary"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <footer class="text-center pt-20">
+            <div class="inline-block relative">
+                <div class="absolute -inset-4 bg-anime-primary blur-xl opacity-30 animate-pulse"></div>
+                <h2 class="relative text-3xl md:text-5xl font-black mb-8 px-8 py-4 glass rounded-full border-2 border-anime-primary">
+                    在台北，永遠不怕找不到下一餐！
+                </h2>
+            </div>
+            
+            <div class="max-w-2xl mx-auto text-lg text-slate-400 mt-8 space-y-4">
+                <p>趨勢會變，濾鏡會變，AI 的演算法也會變，但那家能讓你在疲憊的一天結束後，吃進一口便不由自主露出微笑的餐廳，就是你心中最值得推薦的「米其林」。</p>
+                <p class="font-accent text-anime-primary text-2xl mt-12 animate-bounce">SEE YOU NEXT MEAL!</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Interactive Elements (Floating Blobs) -->
+    <div class="fixed top-0 left-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+        <div class="absolute top-[20%] right-[10%] w-72 h-72 bg-anime-primary opacity-5 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-[20%] left-[5%] w-96 h-96 bg-anime-secondary opacity-5 rounded-full blur-[150px]"></div>
+    </div>
+
+    <script>
+        // Smooth scroll reveal effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-slide-up');
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
