@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>「互互得正」歷史通識學習網 - 學生專屬學習基地</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbf0',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            900: '#78350f',
+                        },
+                        notebook: {
+                            slate: '#1e293b',
+                            parchment: '#fcfaf2',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome Icons for Beautiful UI -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f7f5eb;
+            background-image: radial-gradient(#e5e1d3 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        /* Custom scrollbar for beautiful chat box */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="h-full flex flex-col overflow-x-hidden text-slate-800">
+
+    <!-- TOP NAVIGATION BAR -->
+    <header class="bg-notebook-slate text-white shadow-md border-b-4 border-brand-500 sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <div class="bg-brand-500 text-notebook-slate p-2.5 rounded-xl font-black text-xl shadow-inner transform -rotate-2">
+                    <i class="fa-solid fa-graduation-cap"></i> 互互得正
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-brand-100 flex items-center gap-2">
+                        歷史通識學習網
+                    </h1>
+                    <p class="text-xs text-slate-300">陪你無情度過期末考與學測歷史的精華祕笈！</p>
+                </div>
+            </div>
+            <!-- Studio Badge / Motto -->
+            <div class="flex items-center gap-3 text-sm">
+                <span class="bg-slate-700 text-brand-200 px-3 py-1 rounded-full text-xs font-semibold">
+                    <i class="fa-solid fa-hourglass-half animate-spin-slow"></i> 追逐流量與真理的知識基地
+                </span>
+                <span class="text-slate-400 hidden md:inline">|</span>
+                <span class="text-xs text-brand-100 font-mono hidden md:inline">Studio: 見錢眼開工作室 ⚜️</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN BODY CONTAINER -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col gap-8">
+        
+        <!-- HERO WELCOME & STATISTICS -->
+        <section class="bg-gradient-to-r from-brand-700 to-brand-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
+            <!-- Decorative Background SVGs representing old scrolls -->
+            <div class="absolute right-0 bottom-0 opacity-10 translate-x-10 translate-y-10">
+                <i class="fa-solid fa-scroll text-[200px]"></i>
+            </div>
+            <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div class="max-w-xl">
+                    <span class="bg-brand-500 text-notebook-slate text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                        各位同學注意啦！
+                    </span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold mt-3 leading-tight">
+                        課本不會告訴你的歷史八卦，都在這裡無情大公開！
+                    </h2>
+                    <p class="text-brand-100 text-sm sm:text-base mt-2">
+                        本學習網站將「埃及死亡學測」、「羅馬火盃試煉」、「矛盾寶鼻伽利略」與「荷蘭女巫秤重」等經典影片知識完全整合，搭配 AI 助教隨時幫你解惑！
+                    </p>
+                </div>
+                <!-- Mini Stats panel -->
+                <div class="grid grid-cols-3 gap-4 bg-black/20 p-4 rounded-2xl w-full md:w-auto">
+                    <div class="text-center px-2">
+                        <span class="block text-xl sm:text-2xl font-black text-brand-300">8+</span>
+                        <span class="text-[10px] sm:text-xs text-slate-300">經典通識主題</span>
+                    </div>
+                    <div class="text-center px-2 border-x border-white/10">
+                        <span class="block text-xl sm:text-2xl font-black text-brand-300">100%</span>
+                        <span class="text-[10px] sm:text-xs text-slate-300">真確文獻考證</span>
+                    </div>
+                    <div class="text-center px-2">
+                        <span class="block text-xl sm:text-2xl font-black text-brand-300">Gemini</span>
+                        <span class="text-[10px] sm:text-xs text-slate-300">智慧阿虎助教</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TWO COLUMN DASHBOARD LAYOUT -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- LEFT COLUMN: RESOURCES & FAQ (lg:col-span-7) -->
+            <div class="lg:col-span-7 flex flex-col gap-6">
+                
+                <!-- SEARCH & FILTER CONSOLE -->
+                <div class="bg-white rounded-2xl p-5 shadow-md border border-slate-200">
+                    <div class="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center">
+                        <!-- Search Box -->
+                        <div class="relative flex-1">
+                            <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </span>
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                oninput="handleSearch()"
+                                placeholder="搜尋：埃及、女巫、伽利略、威尼斯、烏克蘭..." 
+                                class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition duration-150 text-sm"
+                            >
+                        </div>
+                        <!-- Quick Clear Button -->
+                        <div class="flex gap-2 shrink-0 overflow-x-auto pb-1 md:pb-0">
+                            <button onclick="filterCategory('all')" id="btn-all" class="category-btn active px-4 py-2 rounded-xl text-xs font-bold transition">
+                                全部通識
+                            </button>
+                            <button onclick="filterCategory('ancient')" id="btn-ancient" class="category-btn px-4 py-2 rounded-xl text-xs font-bold transition">
+                                古代文明
+                            </button>
+                            <button onclick="filterCategory('europe')" id="btn-europe" class="category-btn px-4 py-2 rounded-xl text-xs font-bold transition">
+                                歐洲歷史
+                            </button>
+                            <button onclick="filterCategory('local')" id="btn-local" class="category-btn px-4 py-2 rounded-xl text-xs font-bold transition">
+                                台灣與地方史
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABS: RESOURCES vs FAQ -->
+                <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden">
+                    <div class="flex border-b border-slate-100 bg-slate-50">
+                        <button onclick="switchTab('resources')" id="tab-resources" class="flex-1 py-4 text-center font-bold text-sm text-brand-700 border-b-2 border-brand-500 focus:outline-none flex justify-center items-center gap-2 transition">
+                            <i class="fa-solid fa-book-bookmark"></i> 通識精華資源庫
+                        </button>
+                        <button onclick="switchTab('faq')" id="tab-faq" class="flex-1 py-4 text-center font-bold text-sm text-slate-500 hover:text-slate-800 border-b-2 border-transparent focus:outline-none flex justify-center items-center gap-2 transition">
+                            <i class="fa-solid fa-circle-question"></i> 期末必備經典 FAQ
+                        </button>
+                    </div>
+
+                    <!-- TAB CONTENTS CONTAINER -->
+                    <div class="p-6">
+                        
+                        <!-- TAB 1: RESOURCE CARDS -->
+                        <div id="content-resources" class="block">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="cardsGrid">
+                                <!-- Dynamically populated by JavaScript -->
+                            </div>
+                            <div id="noResults" class="hidden text-center py-12 text-slate-400">
+                                <i class="fa-solid fa-feather text-4xl mb-3 block text-slate-300"></i>
+                                沒有找到相符的歷史考點，大便酷妹要不要換個關鍵字？
+                            </div>
+                        </div>
+
+                        <!-- TAB 2: FAQ ACCORDIONS -->
+                        <div id="content-faq" class="hidden">
+                            <div class="space-y-4" id="faqAccordion">
+                                <!-- Dynamically populated by JavaScript -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: CHAT PANEL (lg:col-span-5) -->
+            <div class="lg:col-span-5 flex flex-col h-[650px] bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden relative">
+                
+                <!-- Chat Header -->
+                <div class="bg-notebook-slate text-white p-4 flex justify-between items-center border-b border-slate-800">
+                    <div class="flex items-center gap-3">
+                        <div class="relative">
+                            <div class="w-10 h-10 bg-brand-500 text-notebook-slate rounded-full flex items-center justify-center font-black shadow-inner">
+                                <i class="fa-solid fa-paw"></i>
+                            </div>
+                            <span class="absolute bottom-0 right-0 block h-2.5 w-2.5 rounded-full bg-emerald-400 ring-2 ring-notebook-slate"></span>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-1.5">
+                                <h3 class="font-bold text-sm">歷史通識助教「阿虎」</h3>
+                                <span class="bg-brand-500/20 text-brand-300 text-[10px] font-mono px-1.5 py-0.5 rounded font-bold">HOOK Style AI</span>
+                            </div>
+                            <p class="text-[11px] text-slate-400">無情解答各式通識歷史大小問！</p>
+                        </div>
+                    </div>
+                    <!-- Clear Chat Button -->
+                    <button onclick="clearChatHistory()" class="text-xs text-slate-400 hover:text-white transition p-2" title="清除對話歷史">
+                        <i class="fa-solid fa-trash-can"></i> 清除對話
+                    </button>
+                </div>
+
+                <!-- Chat History Area -->
+                <div class="flex-1 overflow-y-auto p-4 space-y-4 bg-notebook-parchment" id="chatArea">
+                    <!-- Greeting Message -->
+                    <div class="flex gap-3 items-start max-w-[85%]">
+                        <div class="w-8 h-8 rounded-xl bg-brand-500 text-notebook-slate flex items-center justify-center font-extrabold text-xs shrink-0 shadow-sm">
+                            虎
+                        </div>
+                        <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-slate-200 text-sm leading-relaxed text-slate-700">
+                            哈囉大家早！我是阿虎助教！🐯✨<br><br>
+                            不論你是想知道<strong>古埃及人怎麼考死亡學測</strong>、<strong>古羅馬女祭司失貞為何要被活埋</strong>，還是<strong>伽利略為什麼是個「矛盾寶鼻」</strong>，我都可以無情為你解答！<br><br>
+                            快在下方點擊熱門問題，或者直接輸入你想問的通識歷史題目吧！
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Predefined Suggestions Bubble (Helper) -->
+                <div class="p-3 bg-slate-50 border-t border-slate-100 overflow-x-auto whitespace-nowrap flex gap-2" id="suggestionsBox">
+                    <button onclick="sendPredefined('埃及人死後要考什麼死亡學測？')" class="bg-white hover:bg-brand-50 border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-full shadow-sm transition inline-block shrink-0">
+                        💀 埃及死亡學測？
+                    </button>
+                    <button onclick="sendPredefined('灶神廟的處女祭司熄滅聖火會怎樣？')" class="bg-white hover:bg-brand-50 border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-full shadow-sm transition inline-block shrink-0">
+                        🔥 羅馬神廟殘酷懲罰？
+                    </button>
+                    <button onclick="sendPredefined('為什麼說伽利略是矛盾寶鼻？')" class="bg-white hover:bg-brand-50 border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-full shadow-sm transition inline-block shrink-0">
+                        🤥 矛盾寶鼻伽利略？
+                    </button>
+                    <button onclick="sendPredefined('中世紀怎麼用體重量女巫？')" class="bg-white hover:bg-brand-50 border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-full shadow-sm transition inline-block shrink-0">
+                        🧙‍♀️ 荷蘭女巫秤重？
+                    </button>
+                    <button onclick="sendPredefined('霧社事件中的花崗一郎有什麼故事？')" class="bg-white hover:bg-brand-50 border border-slate-200 text-slate-700 text-xs px-3 py-1.5 rounded-full shadow-sm transition inline-block shrink-0">
+                        🌸 霧社花崗一郎？
+                    </button>
+                </div>
+
+                <!-- Chat Input Controls -->
+                <div class="p-4 bg-white border-t border-slate-200 flex gap-2 items-center">
+                    <input 
+                        type="text" 
+                        id="chatInput" 
+                        onkeypress="handleChatKey(event)"
+                        placeholder="向阿虎發問歷史問題..." 
+                        class="flex-1 px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition duration-150 text-sm"
+                    >
+                    <button 
+                        onclick="sendUserMessage()" 
+                        id="sendBtn"
+                        class="bg-brand-600 hover:bg-brand-700 text-white w-10 h-10 rounded-2xl flex items-center justify-center shadow-md transition shrink-0"
+                    >
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FLOATING FOOTER -->
+    <footer class="bg-notebook-slate text-slate-400 text-center py-6 mt-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 text-xs space-y-2">
+            <p>© 2026 「互互得正」通識歷史學習網。與大夥一起歷史考 100 分！</p>
+            <p class="text-slate-500">本網站之知識庫與內容取材自網紅 HOOK 之通識歷史主題影片與其 NotebookLM 資料。AI 功能採用 Google Gemini 2.5 Flash 提供智慧對話服務。</p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE DETAIL POPUP MODAL -->
+    <div id="detailModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto shadow-2xl border border-slate-200 flex flex-col transform transition duration-200 scale-95" id="modalContainer">
+            <!-- Modal Header -->
+            <div class="bg-slate-50 p-5 border-b border-slate-100 flex justify-between items-center sticky top-0 bg-white z-10">
+                <div class="flex items-center gap-3">
+                    <span class="bg-brand-100 text-brand-800 text-xs font-bold px-2.5 py-1 rounded-full" id="modalCategoryBadge">
+                        分類標籤
+                    </span>
+                    <h4 class="font-black text-lg text-slate-900" id="modalTitle">歷史探索主題</h4>
+                </div>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-slate-600 p-2 text-xl focus:outline-none">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <!-- Modal Content -->
+            <div class="p-6 space-y-4">
+                <div class="bg-brand-50 p-4 rounded-2xl border border-brand-100 space-y-1">
+                    <span class="text-xs text-brand-800 font-bold block"><i class="fa-solid fa-key"></i> 本章核心通識關鍵字：</span>
+                    <p class="text-sm text-brand-900 leading-relaxed font-semibold" id="modalKeyFacts">關鍵字1、關鍵字2...</p>
+                </div>
+                <div class="space-y-3">
+                    <h5 class="font-extrabold text-slate-800 flex items-center gap-2">
+                        <i class="fa-solid fa-scroll text-brand-600"></i> 無情深度歷史摘要：
+                    </h5>
+                    <div class="text-slate-600 text-sm leading-relaxed space-y-3 whitespace-pre-line" id="modalDetailedContent">
+                        詳細內容填充...
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Footer -->
+            <div class="p-4 bg-slate-50 border-t border-slate-100 flex justify-end">
+                <button onclick="closeModal()" class="bg-notebook-slate hover:bg-slate-700 text-white font-bold text-xs px-5 py-2.5 rounded-xl transition shadow-md">
+                    了解，繼續學習！
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUDIO PLAYER UTILITY (OPTIONAL BASELINE PCM CONVERTER FOR TTS) -->
+    <!-- Not strictly used unless spoken text triggers TTS, available for robust extension -->
+
+    <!-- JAVASCRIPT APPLICATION CORE -->
+    <script>
+        // GLOBAL STATE MANAGEMENT
+        const apiKey = ""; // API Key injected at runtime
+        let activeCategory = "all";
+        let activeTab = "resources";
+        
+        // KNOWLEDGE BASE DATABASE (Extracted strictly from NotebookLM uploaded transcripts)
+        const resourceData = [
+            {
+                id: 1,
+                category: "ancient",
+                categoryLabel: "古代文明",
+                title: "古埃及死亡學測與神祕法老圖坦卡門",
+                icon: "fa-solid fa-ankh",
+                summary: "了解埃及人靈魂永生的神秘通關考卷，與不被正史承認的圖坦卡門悲慘身世。",
+                keyFacts: "死亡學測、心臟秤重、使者之書、防止心臟說謊的聖甲蟲、阿肯那頓一神教改革",
+                detailedContent: `💡 歷史深度筆記：
+
+                1. 【死亡學測流程】：
+                   古埃及人深信人死後靈魂必須進入冥界接受審判。這是一場決定能否獲得永生的「死亡學測」。
+                   亡者的心臟會放在天秤的一端，另一端則是正義與真理女神瑪阿特（Ma'at）的羽毛。
+                   如果心臟比羽毛重，代表你生前做過太多壞事，會立刻被旁邊的怪獸阿米特（Ammit，鱷魚頭、獅子身、河馬屁股）吃掉，徹底灰飛煙滅。
+
+                2. 【聖甲蟲與使者之書】：
+                   為了在考試中作弊（或通關），埃及人發明了「使者之書（Book of the Dead）」，上頭寫滿了各種對付冥界怪物的防禦咒語，可以當作通關教科書或小抄。
+                   另外，亡者胸前必須配戴一枚大大的「石製聖甲蟲護身符」，功能是施展強力法術「鎖住心臟的嘴巴」，防止心臟在神明法官面前抖出生前說過謊、做過壞事的罪證。
+
+                3. 【圖坦卡門與被抹除的爸爸】：
+                   大名鼎鼎的圖坦卡門（Tutankhamun）其實生前在歷史上根本沒人在乎。
+                   他的父親阿肯那頓（Akhenaten）是一位極端法老，發起一神教革命（強迫全埃及改信太陽神阿頓），導致祭司集團大反彈。
+                   圖坦卡門死後，後來的法老把他們一家人的官方歷史紀錄全數抹除、割掉。也正因為歷史上沒人記得圖坦卡門，他的陵墓才得以完好保存，沒被盜墓贼光顧，直到 1922 年被完整開箱。`
+            },
+            {
+                id: 2,
+                category: "ancient",
+                categoryLabel: "古代文明",
+                title: "羅馬火盃考驗與狂熱角鬥士迷妹",
+                icon: "fa-solid fa-fire-burner",
+                summary: "開箱古羅馬最致命的灶神神廟處女祭司誓言，以及角鬥士汗水香水秘聞！",
+                keyFacts: "灶神神廟、30年守貞、熄火活埋餓死刑、角鬥士汗水與鮮血香水",
+                detailedContent: `💡 歷史深度筆記：
+
+                1. 【神聖且致命的聖火任務】：
+                   在古羅馬，看守灶神（Vesta）神廟聖火是國家最重要的事。
+                   這項任務由六位「灶神處女祭司（Vestal Virgins）」承擔。她們在 6 至 10 歲時被選中，必須服務並保持絕對貞潔整整 30 年。
+                   她們享有尊貴的特權（如法庭作證免宣誓、死後葬在羅馬城內），但懲罰也是羅馬最殘酷的——如果因為疏忽讓神廟聖火「熄滅」，她們會被祭司長無情鞭笞。
+                   如果她們被發現「打破貞潔誓言（失貞）」，將會被活活關進地牢（僅留幾天口糧），活埋或活活餓死！
+
+                2. 【角鬥士的汗水與鮮血商品化】：
+                   古羅馬競技場中的角鬥士在現代常被描述為可憐奴隸，但當時頂尖角鬥士其實是全羅馬的頂級男神。
+                   羅馬貴婦對他們瘋狂崇拜。當時甚至會收集、抽取角鬥士身上的「汗水與鮮血」，將其裝在精美的小瓶子裡，當作高價保養品或香水抹在身上，甚至當作春藥、壯陽藥飲用，相信這樣能獲得角鬥士的強悍生命力！`
+            },
+            {
+                id: 3,
+                category: "europe",
+                categoryLabel: "歐洲歷史",
+                title: "矛盾寶鼻伽利略的科學與崩潰家庭",
+                icon: "fa-solid fa-user-astronaut",
+                summary: "科學巨人伽利略一方面對抗教廷威權，私底下卻是家破人亡的矛盾老派父親？",
+                keyFacts: "日心說、對話錄暗諷教皇、教皇烏爾班八世、自私逼迫女兒出家修道院",
+                detailedContent: `💡 歷史深度筆記：
+
+                1. 【暗諷教皇的滅亡對話錄】：
+                   伽利略大力捍衛「日心說」（地球繞著太陽轉）。
+                   原本教皇烏爾班八世是他的支持者與好友，還允許他寫書探討，前提是日心說只能當作「假說」。
+                   但伽利略脾氣超硬，在發表《關於兩大世界體系的對話》時，設計了一個代表教廷舊思維的愚蠢角色叫做「Simplicius」（愚蠢/單純之人），並把教皇烏爾班八世曾說過的話原封不動放進這個笨蛋角色的台詞裡。教皇氣到差點中風，立刻將他送往宗教法庭。
+
+                2. 【家庭生活上的極端自私】：
+                   課本稱讚伽利略是現代科學的奠基者，但在家庭中他卻是個不折不扣的「爛爸爸」。
+                   因為他是個老派的人，嫌棄與情婦生下的兩名女兒是「私生女」，擔心她們會敗壞門楣且不想付龐大的嫁妝。
+                   於是在她們極其年輕時，強迫兩位女兒（維吉尼亞、利維亞）出家，進入極其貧困、連飯都吃不飽的阿西西修道院當修女，一生孤獨悲慘。伽利略雖崇尚科學理性，私底下卻沉迷禱告、固執家父長作風，是個完全分裂的「矛盾寶鼻」。`
+            },
+            {
+                id: 4,
+                category: "europe",
+                categoryLabel: "歐洲歷史",
+                title: "威尼斯享樂之城與最高額妓女稅",
+                icon: "fa-solid fa-ship",
+                summary: "威尼斯在中世紀竟然是歐洲著名的拉斯維加斯？政府甚至靠徵收妓女稅致富！",
+                keyFacts: "歐洲享樂與賭博之都、合法妓院、妓女稅為財政支柱、大情聖卡薩諾瓦",
+                detailedContent: `💡 歷史深度筆記：
+
+                1. 【中世紀的拉斯維加斯】：
+                   約從 12 世紀起，威尼斯不再只是水都，而是整個歐洲有錢人、水手瘋狂湧入的度假天堂。
+                   這裡開放賭博、縱情聲色，並將性產業徹底合法化、規範化。威尼斯政府甚至會在特定區域集中設立妓院。
+
+                2. 【政府靠「妓女稅」發大財】：
+                   最奇特的是，威尼斯政府對於繁榮的性工作者課徵高額的「妓女稅」（據記載，稅率比普通貿易還要高，甚至高達七三分成）。
+                   這筆龐大的「妓女稅」成了威尼斯共和國建造宏偉建築、擴張海權的重要财政支柱！
+                   大名鼎鼎的傳奇大情聖卡薩諾瓦（Casanova）正是在這個高度開放且繁雜的享樂環境中誕生與聞名。當你走進聖馬可大教堂，看到金光閃閃的壁畫，背後可能也凝聚著妓女稅的「血汗頁面」。`
+            },
+            {
+                id: 5,
+                category: "europe",
+                categoryLabel: "歐洲歷史",
+                title: "荷蘭奧德瓦特女巫秤重與安全證書",
+                icon: "fa-solid fa-weight-hanging",
+                summary: "在中世紀，體重太輕竟然會被當成女巫燒死？荷蘭人竟然用秤量體重救人！",
+                keyFacts: "女巫審判、體重秤量、飛天掃帚、奧德瓦特安全證書",
+                detailedContent: `💡 歷史深度筆記：
+
+                1. 【女巫飛天掃帚的物理學】：
+                   在中世紀歐洲可怕的女巫審判（Witch Trials）中，有一條非常荒謬卻被普遍接受的「物理迷信」：
+                   人們相信女巫之所以能騎著細細的掃帚在天空中飛翔，是因為她們的身體必須「極其輕盈、甚至沒有重量」。
+                   因此，如果有人懷疑你是女巫，就會帶你去量體重。如果你的體重輕到完全不合常理，就判定你是女巫，準備被火活活燒死。
+
+                2. 【奧德瓦特女巫秤的救贖】：
+                   荷蘭的奧德瓦特（Oudewater）設立了一個國家官方認證的「女巫秤（Heksenwaag）」。
+                   當各地被懷疑是女巫的無辜女性來到這裡量體重時，奧德瓦特的秤手們會非常公正誠實地量出她們真實的正常體重（例如 53 公斤）。
+                   一旦體重符合常理（太重飛不起來），官方就會頒發一份蓋大印的官方認證證書——「不是女巫證書（Witch Certificate）」，有了這張證書在身上，她們在全歐洲就能安全活動，免受宗教迫害。`
+            },
+            {
+                id: 6,
+                category: "local",
+                categoryLabel: "台灣與地方史",
+                title: "台灣日治末期物資管制與花崗一郎悲歌",
+                icon: "fa-solid fa-cookie-bite",
+                summary: "開箱日治時期的野菜配給卷，並聊聊霧社事件中被兩面夾擊的花崗一郎。",
+                keyFacts: "後藤新平真跡、物資管制家庭配給卷、霧社事件花崗一郎自盡",
+                detailedContent: `💡 歷史深度筆記：
+
+                1. 【日治晚期的殘酷物資管制】：
+                   在台灣「內地延長主義」晚期與二次大戰太平洋戰爭爆發後，台灣成為日本軍事大後方。
+                   當時島內物資嚴重短缺。台灣人平日生活遭到極端管制，高麗菜、豬肉、食糖甚至是野菜，一律需要憑官方發放的「家庭食物配給卷」去排隊限額領取，生活極其清苦困頓。
+
+                2. 【花崗一郎在霧社事件中的雙重撕裂】：
+                   日治時期中最令人痛心的歷史人物之一莫過於花崗一郎。
+                   他是極其聰明的塞德克族原住民，日本人為宣傳「文明教化」，刻意將他栽培送入師範學校，畢業後讓他回到部落擔任教師與巡查。
+                   然而，當 1930 年爆發霧社事件，他的族人起義反抗日本暴政時，花崗一郎陷入了可怕的地獄：
+                   一方面，他深深感激日本人對他的培育之恩與厚待；另一方面，他流著原住民的血，絕對無法朝著自己的族人與家人開槍背叛。
+                   在兩大難以調和的撕裂拉扯下，他最終在牆壁上留下絕筆，帶著妻子與剛出生的孩子，悲壯地選擇自殺了結年輕的生命。`
+            },
+            {
+                id: 7,
+                category: "local",
+                categoryLabel: "台灣與地方史",
+                title: "烏克蘭家庭小精靈與神祕婚姻花冠",
+                icon: "fa-solid fa-wand-magic-sparkles",
+                summary: "烏克蘭傳說中不給飲料就大肆拆家的 Domovik 小精靈，以及代表婚姻代碼的花圈！",
+                keyFacts: "家庭小精靈Domovik、傳統花圈樣式、烏克蘭女孩的婚姻代號",
+                detailedContent: `💡 歷史深度筆記：
+
+                1. 【地基主化身：家庭精靈 Domovik】：
+                   在烏克蘭傳統信仰中，每一戶人家都居住著一個叫「Domovik」的家庭小精靈（類似台灣的地基主）。
+                   Domovik 脾氣非常直接：如果你對他夠好、保持家裡整潔，他晚上就會無情地幫你打掃家裡、折好衣服、保護家人的安全。
+                   但如果你不尊重他、不打掃家裡，他就會發怒大肆砸碗盤、破壞你的家具！
+                   討好他的秘訣非常簡單：晚上睡覺前，在廚房角落放上一小杯牛奶、果汁或酒，他就會非常開心、幫你當好免費清潔工。
+
+                2. 【花冠是精準的社會婚姻代碼】：
+                   烏克蘭女孩在重要節日配戴五彩繽紛的「傳統花冠」可不是隨便搭配好看。
+                   花圈上的花朵種類、緞帶顏色和戴法，是精密的社會代碼：
+                   當地人看一眼女孩的頭飾，就能判斷她：A. 單身且正在尋找對象、B. 已經訂婚但還未舉辦婚宴、C. 已婚但還未生子、D. 已婚且已經生小孩。戴錯花冠可是會鬧出巨大社交笑話的！`
+            },
+            {
+                id: 8,
+                category: "local",
+                categoryLabel: "台灣與地方史",
+                title: "土耳其以弗所圖書館的秘密地道",
+                icon: "fa-solid fa-landmark",
+                summary: "塞爾蘇斯圖書館精美門扉下，竟然藏有一條直通對街妓院的隱密暗道！",
+                keyFacts: "塞爾蘇斯圖書館、通往妓院的地道、四大女神（智慧、美德、洞察力、同理心）",
+                detailedContent: `💡 歷史深度筆記：
+
+                1. 【看書是假，尋樂是真】：
+                   位於土耳其以弗所（Ephesos）的塞爾蘇斯圖書館是古羅馬世界第三大圖書館，外觀金碧輝煌。
+                   然而考古學家發現了一個令人啼笑皆非的「古羅馬秘密」：
+                   當時許多害羞的有錢人、貴族或靠港的水手，假裝一臉嚴肅、抱著滿腹經綸對妻子說：「我要去圖書館看財經與哲學書籍了。」
+                   實際上，圖書館地下暗藏了一條秘密「地道」，可以直接走到對街的「紀院（妓院）」尋樂！這套『書中自有黃金屋』的完美障眼法，讓羅馬有錢人完美隱藏了自己的足跡。
+
+                2. 【門口失去頭顱的四大女神】：
+                   圖書館門口有四座宏偉的女神像，分別代表：智慧、美德、洞察力（洞察力女神因為太會洞察了，頭顱已被偷走不見）、與同理心。
+                   這證明古羅馬人在縱情聲色的背後，仍然非常崇尚這些哲學與人文美德。`
+            }
+        ];
+
+        // FAQ PREDEFEINED ACCORDION DATA
+        const faqData = [
+            {
+                q: "古埃及人死後必須面臨的「死亡學測」具體要考什麼？",
+                a: "亡者死後必須帶著必備教材「使者之書」（記滿對付地界怪物的咒語）前往大廳受審。亡者的心臟會放在天平上，與代表真理的羽毛稱重。如果心臟太重，會被怪獸阿米特立刻吃掉！為了防止心臟嘴碎洩漏罪行，亡者胸前還必須放上防說謊的「聖甲蟲護身符」來封口。"
+            },
+            {
+                q: "灶神神廟處女祭司熄滅聖火或失貞為什麼要被「活埋」？",
+                a: "在羅馬信仰中，聖火代表羅馬國運。灶神祭司（Vestal Virgins）一律在幼年入廟守貞 30 年。如果任由聖火熄滅，她們會面臨無情鞭打；如果打破貞潔誓言，她們會被活活埋入裝有一丁點口糧的地窖中，不留一絲生路。這是古羅馬維護神權與秩序的極端手段。"
+            },
+            {
+                q: "為什麼說科學巨擘伽利略是一個極度自私的「矛盾寶鼻」？",
+                a: "伽利略在科學上抗擊教廷，私底下卻自私且固執。他一方面不肯付嫁妝、嫌棄兩名女兒（私生女）是累贅，竟強行逼迫她們進入最貧窮孤苦的修道院出家，摧毀她們的一生；另一方面他雖崇拜理性的日心說，自己卻迷信禱告。他寫書甚至用愚蠢的角色嘲諷一直挺他的教皇好友，落得家破人亡，令人哭笑不得。"
+            },
+            {
+                q: "中世紀如何利用體重量女巫？為什麼在荷蘭能量體重保命？",
+                a: "中世紀獵巫迷信認為，女巫要騎掃帚在天空中飛翔，體重必定「比掃帚還輕」。荷蘭奧德瓦特設有官方的「女巫秤（Heksenwaag）」。被獵巫者一旦在秤上稱出正常人類重量（如53公斤），官方就會核發一張「非女巫安全證書」，證實她「飛不起來」，幫助無數無辜女性從殘酷的宗教裁判所手中生還。"
+            },
+            {
+                q: "日本江戶時代最厲害的相撲力士是誰？浮世繪和力士有何關係？",
+                a: "江戶時代最傳奇力士是「雷電為右衛門」，身高高達197公分、體重172公斤，在當時猶如泰山巨人，創下極其恐怖的連勝紀錄。那時的江戶百姓非常瘋狂相撲，力士的浮世繪版畫就是當時的「偶像小卡」，迷妹和粉絲們會大量購買收藏貼在家裡，瘋狂程度不輸現代 K-POP 飯圈！"
+            }
+        ];
+
+        // CHATBOT MEMORY ARRAY
+        let chatHistory = [];
+
+        // INITIALIZE APP ON LOAD
+        window.onload = function() {
+            renderCards();
+            renderFAQ();
+            setupChatScroll();
+        };
+
+        // RENDER RESOURCE CARDS
+        function renderCards() {
+            const grid = document.getElementById("cardsGrid");
+            const searchInput = document.getElementById("searchInput").value.toLowerCase();
+            grid.innerHTML = "";
+            let matchCount = 0;
+
+            resourceData.forEach(card => {
+                // Filter validation
+                const matchCategory = (activeCategory === "all" || card.category === activeCategory);
+                const matchSearch = (
+                    card.title.toLowerCase().includes(searchInput) ||
+                    card.keyFacts.toLowerCase().includes(searchInput) ||
+                    card.summary.toLowerCase().includes(searchInput) ||
+                    card.detailedContent.toLowerCase().includes(searchInput)
+                );
+
+                if (matchCategory && matchSearch) {
+                    matchCount++;
+                    // Build highlighted title and keyfacts if searching
+                    let displayTitle = card.title;
+                    let displayKeyFacts = card.keyFacts;
+
+                    if (searchInput) {
+                        const regex = new RegExp(`(${searchInput})`, 'gi');
+                        displayTitle = card.title.replace(regex, `<mark class="bg-brand-200 text-slate-900 rounded px-0.5">$1</mark>`);
+                        displayKeyFacts = card.keyFacts.replace(regex, `<mark class="bg-brand-200 text-slate-900 rounded px-0.5">$1</mark>`);
+                    }
+
+                    const cardHTML = `
+                        <div class="bg-slate-50 border border-slate-200 hover:border-brand-500 hover:shadow-lg rounded-2xl p-5 flex flex-col justify-between transition duration-200 hover:-translate-y-1">
+                            <div>
+                                <div class="flex items-center gap-3 mb-3">
+                                    <div class="w-9 h-9 bg-brand-100 text-brand-700 rounded-xl flex items-center justify-center text-sm shadow-inner shrink-0">
+                                        <i class="${card.icon}"></i>
+                                    </div>
+                                    <span class="bg-slate-200/80 text-slate-700 text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase">
+                                        ${card.categoryLabel}
+                                    </span>
+                                </div>
+                                <h4 class="font-extrabold text-slate-900 text-sm mb-2 leading-snug">
+                                    ${displayTitle}
+                                </h4>
+                                <p class="text-slate-500 text-xs leading-relaxed mb-4">
+                                    ${card.summary}
+                                </p>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="text-[11px] text-slate-600 bg-white px-3 py-1.5 rounded-xl border border-slate-100 font-medium">
+                                    🔑 ${displayKeyFacts}
+                                </div>
+                                <button onclick="openModal(${card.id})" class="w-full bg-notebook-slate hover:bg-slate-700 text-white font-bold text-xs py-2 px-4 rounded-xl transition shadow-md flex justify-center items-center gap-2">
+                                    <i class="fa-solid fa-scroll"></i> 閱讀筆記
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                    grid.insertAdjacentHTML('beforeend', cardHTML);
+                }
+            });
+
+            const noResults = document.getElementById("noResults");
+            if (matchCount === 0) {
+                noResults.classList.remove("hidden");
+            } else {
+                noResults.classList.add("hidden");
+            }
+        }
+
+        // RENDER FAQ SECTION
+        function renderFAQ() {
+            const container = document.getElementById("faqAccordion");
+            container.innerHTML = "";
+
+            faqData.forEach((item, index) => {
+                const faqHTML = `
+                    <div class="border border-slate-200 rounded-2xl overflow-hidden shadow-sm transition">
+                        <button onclick="toggleFaq(${index})" class="w-full bg-slate-50 p-4 text-left font-bold text-sm text-slate-800 hover:bg-brand-50 flex justify-between items-center transition focus:outline-none">
+                            <span class="pr-4 flex items-start gap-2">
+                                <span class="bg-brand-200 text-brand-900 text-[10px] px-1.5 py-0.5 rounded font-mono font-black mt-0.5">Q</span>
+                                ${item.q}
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-xs text-slate-400 transition transform duration-200" id="faq-icon-${index}"></i>
+                        </button>
+                        <div class="hidden bg-white p-4 border-t border-slate-100 text-xs leading-relaxed text-slate-600" id="faq-ans-${index}">
+                            ${item.a}
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', faqHTML);
+            });
+        }
+
+        // CATEGORY FILTER
+        function filterCategory(cat) {
+            activeCategory = cat;
+            document.querySelectorAll(".category-btn").forEach(btn => btn.classList.remove("active", "bg-brand-600", "text-white"));
+            document.querySelectorAll(".category-btn").forEach(btn => btn.classList.add("bg-slate-100", "text-slate-600"));
+            
+            const activeBtn = document.getElementById(`btn-${cat}`);
+            activeBtn.classList.remove("bg-slate-100", "text-slate-600");
+            activeBtn.classList.add("active", "bg-brand-600", "text-white");
+
+            renderCards();
+        }
+
+        // SWITCH TAB (Resources vs FAQ)
+        function switchTab(tab) {
+            activeTab = tab;
+            const tabRes = document.getElementById("tab-resources");
+            const tabFaq = document.getElementById("tab-faq");
+            const contentRes = document.getElementById("content-resources");
+            const contentFaq = document.getElementById("content-faq");
+
+            if (tab === "resources") {
+                tabRes.className = "flex-1 py-4 text-center font-bold text-sm text-brand-700 border-b-2 border-brand-500 focus:outline-none flex justify-center items-center gap-2 transition";
+                tabFaq.className = "flex-1 py-4 text-center font-bold text-sm text-slate-500 hover:text-slate-800 border-b-2 border-transparent focus:outline-none flex justify-center items-center gap-2 transition";
+                contentRes.classList.remove("hidden");
+                contentFaq.classList.add("hidden");
+            } else {
+                tabFaq.className = "flex-1 py-4 text-center font-bold text-sm text-brand-700 border-b-2 border-brand-500 focus:outline-none flex justify-center items-center gap-2 transition";
+                tabRes.className = "flex-1 py-4 text-center font-bold text-sm text-slate-500 hover:text-slate-800 border-b-2 border-transparent focus:outline-none flex justify-center items-center gap-2 transition";
+                contentFaq.classList.remove("hidden");
+                contentRes.classList.add("hidden");
+            }
+        }
+
+        // SEARCH INPUT HANDLER
+        function handleSearch() {
+            renderCards();
+        }
+
+        // FAQ ACCORDION ACCESSIBILITY
+        function toggleFaq(index) {
+            const ans = document.getElementById(`faq-ans-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (ans.classList.contains("hidden")) {
+                ans.classList.remove("hidden");
+                icon.classList.add("rotate-180");
+            } else {
+                ans.classList.add("hidden");
+                icon.classList.remove("rotate-180");
+            }
+        }
+
+        // OPEN DETAIL MODAL
+        function openModal(id) {
+            const card = resourceData.find(item => item.id === id);
+            if (!card) return;
+
+            document.getElementById("modalCategoryBadge").textContent = card.categoryLabel;
+            document.getElementById("modalTitle").textContent = card.title;
+            document.getElementById("modalKeyFacts").textContent = card.keyFacts;
+            document.getElementById("modalDetailedContent").innerHTML = card.detailedContent.replace(/\n/g, "<br>");
+
+            const modal = document.getElementById("detailModal");
+            const container = document.getElementById("modalContainer");
+            
+            modal.classList.remove("hidden");
+            setTimeout(() => {
+                container.classList.remove("scale-95");
+                container.classList.add("scale-100");
+            }, 50);
+        }
+
+        // CLOSE DETAIL MODAL
+        function closeModal() {
+            const modal = document.getElementById("detailModal");
+            const container = document.getElementById("modalContainer");
+
+            container.classList.remove("scale-100");
+            container.classList.add("scale-95");
+            setTimeout(() => {
+                modal.classList.add("hidden");
+            }, 150);
+        }
+
+        // SYSTEM PROMPT FOR GEMINI AI (HOOK / HOOK STUDIO THEME)
+        const systemInstruction = `你是一位幽默風趣、博學多才的歷史通識助教「阿虎」（靈感來自知名知識網紅 HOOK 的歷史節目）。
+        你的主要職責是解答學生們對於通識歷史與文化相關主題的疑問。
+        
+        【阿虎的說話風格與規定】：
+        1. 語氣必須活潑、幽默、充滿人情味與吐槽感。
+        2. 稱呼使用者為「寶鼻」、「大便酷妹」或「各位同學」。
+        3. 經常無情吐槽歷史人物（例如說伽利略是『矛盾寶鼻』、拿破崙寫情書像『無情舔狗』、羅馬貴婦愛拿角鬥士汗水當香水）。
+        4. 經常使用語氣詞與梗詞，如：「無情...」、「蛤？」、「真假啦」、「乾媽...」、「這真的很怪，但是是好的那種」、「恭迎採購部總監」等。
+        5. 【極度重要】：你必須基於下方提供的「歷史與通識知識庫」事實來精確回答。不可捏造歷史！如果使用者問及該知識庫以外的主題，你可以搞笑地幽默帶過並引導回這份名單上的考點（例如：『蛤？這個我們歷史課本沒寫，大便酷妹你要不要問問古埃及人要怎麼通過冥界死亡學測？』）。
+
+        【阿虎的歷史與通識知識庫】：
+        - 古埃及死亡學測：死後必須考死亡學測。亡者心臟與代表真理的女神瑪阿特羽毛秤重，重者被鱷魚頭獅子身怪獸阿米特吞食。通關靠「使者之書（Book of the Dead）」，上面寫滿對付怪物的咒語小抄。亡者胸前放上「聖甲蟲護身符」來阻礙心臟對著法官神吐露實情罪證。圖坦卡門因生前太不重要（其父阿肯那頓推行一神教革命，全家後續被史官抹除），死得早墓地簡陋，才完美躲過盜墓賊得以完整保存到1922年開箱。
+        - 古羅馬灶神與角鬥士：羅馬神廟（Vesta）處女祭司守護聖火30年，守貞且防熄火。一旦熄火要挨打，一旦失貞（失貞）要被無情塞入地窖活埋餓死。另一方面，角鬥士被視作男神，他們的汗水與鮮血會被提煉出售給羅馬貴婦當香水與壯陽藥使用。
+        - 矛盾寶鼻伽利略：科學巨擘，提倡日心說。與教皇烏爾班八世翻臉，因其寫書《對話》中設計愚蠢角色 Simplicius（愚蠢者）暗諷教皇好友的話，被宗教裁判所判刑。但他極其矛盾，崇拜理性卻迷信禱告，對家裡極端自私，強迫兩位私生女兒在修道院當一輩子吃不飽的修女，摧毀她們一生。
+        - 威尼斯歷史：12世紀的享樂與賭博之都。性產業合法，政府會向妓院徵收高額「妓女稅」作為國家大建工程與擴張海權的主要財政來源。大情聖卡薩諾瓦。聖馬可大教堂極盡奢華。
+        - 荷蘭女巫秤：中世紀女巫審判盛行，迷信女巫能騎掃帚飛天，體重一定極輕。荷蘭奧德瓦特（Oudewater）設有官方「女巫秤（Heksenwaag）」。稱出正常體重（如53kg）的人會獲得「非女巫證書」，在全歐洲保命無憂。
+        - 台灣日治時期老物件：內地延長主義晚期，戰時台灣實施強大物資管制，高麗菜、野菜均需家庭配給卷限額領取。霧社事件中，花崗一郎（深受日本培育之恩，卻不願開槍殘害同族）在撕裂痛苦中選擇與妻兒自盡。後藤新平的書法字。
+        - 烏克蘭歷史：傳說有一種家庭小精靈 Domovik（類似地基主），對他好幫你做家務打掃折衣服，對他不好會發瘋拆家，討好祕訣是晚上在角落留一點飲料牛奶。傳統五彩花冠是複雜的婚姻代號（單身找對象、訂婚、已婚、育兒均有專屬戴法花朵）。
+        - 土耳其以弗所：塞爾蘇斯圖書館大門下竟然有密道直通對街的妓院（水手或害羞有錢人假借看書，實則去玩）。門口有失去頭顱的四大女神像（智慧、美德、洞察力、同理心）。
+        - 日本相撲力士：江戶時代雷電為右衛門高達197cm、172kg。那時販售力士浮世繪版畫，等同於江戶時代的偶像小卡。
+        - 甘比亞歷史：吟遊詩人（Griot）是傳遞故事史料的真實職業。甘比亞宗教包容力極高，不同部落會互相共度耶誕節與伊斯蘭節日。
+
+        請用條理清晰、排版優雅的Markdown風格（加粗、列表）來回應學生，並隨時散發阿虎的暖心搞笑精神！`;
+
+        // SCROLL CHAT AREA TO BOTTOM
+        function setupChatScroll() {
+            const chatArea = document.getElementById("chatArea");
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
+
+        // SEND PREDEFINED QUESTION FROM SUGGESTIONS
+        function sendPredefined(text) {
+            document.getElementById("chatInput").value = text;
+            sendUserMessage();
+        }
+
+        // HANDLE CHAT KEYPRESS (ENTER)
+        function handleChatKey(e) {
+            if (e.key === 'Enter') {
+                sendUserMessage();
+            }
+        }
+
+        // SEND USER MESSAGE & TRIGGER GEMINI API
+        async function sendUserMessage() {
+            const input = document.getElementById("chatInput");
+            const query = input.value.trim();
+            if (!query) return;
+
+            // Render user message to panel
+            const chatArea = document.getElementById("chatArea");
+            const userHTML = `
+                <div class="flex gap-3 justify-end items-start max-w-[85%] ml-auto">
+                    <div class="bg-brand-500 text-notebook-slate p-3.5 rounded-2xl shadow-sm text-sm font-semibold leading-relaxed">
+                        ${query}
+                    </div>
+                    <div class="w-8 h-8 rounded-xl bg-notebook-slate text-brand-200 flex items-center justify-center font-extrabold text-xs shrink-0 shadow-sm">
+                        我
+                    </div>
+                </div>
+            `;
+            chatArea.insertAdjacentHTML('beforeend', userHTML);
+            input.value = "";
+            setupChatScroll();
+
+            // Render Thinking Loading message
+            const thinkingId = "thinking-" + Date.now();
+            const thinkingHTML = `
+                <div class="flex gap-3 items-start max-w-[85%]" id="${thinkingId}">
+                    <div class="w-8 h-8 rounded-xl bg-brand-500 text-notebook-slate flex items-center justify-center font-extrabold text-xs shrink-0 shadow-sm animate-pulse">
+                        虎
+                    </div>
+                    <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-slate-200 text-sm leading-relaxed text-slate-400 italic">
+                        <i class="fa-solid fa-spinner animate-spin"></i> 阿虎正在無情查閱通識課本中...
+                    </div>
+                </div>
+            `;
+            chatArea.insertAdjacentHTML('beforeend', thinkingHTML);
+            setupChatScroll();
+
+            // Prepare memory payload
+            chatHistory.push({ role: "user", text: query });
+            // Keep memory to last 10 messages to avoid payload blowup
+            const recentHistory = chatHistory.slice(-10);
+
+            try {
+                const responseText = await callGeminiWithRetry(query, recentHistory);
+                
+                // Remove thinking loader and replace with beautiful bot response
+                document.getElementById(thinkingId).remove();
+                
+                // Format response into simple readable HTML elements (simulate markdown basics)
+                const formattedText = responseText
+                    .replace(/\n\n/g, '<br><br>')
+                    .replace(/\n/g, '<br>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>');
+
+                const botHTML = `
+                    <div class="flex gap-3 items-start max-w-[85%]">
+                        <div class="w-8 h-8 rounded-xl bg-brand-500 text-notebook-slate flex items-center justify-center font-extrabold text-xs shrink-0 shadow-sm">
+                            虎
+                        </div>
+                        <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-slate-200 text-sm leading-relaxed text-slate-700">
+                            ${formattedText}
+                        </div>
+                    </div>
+                `;
+                chatArea.insertAdjacentHTML('beforeend', botHTML);
+                chatHistory.push({ role: "model", text: responseText });
+
+            } catch (error) {
+                // If call fails completely after all retries, show helpful custom UI
+                document.getElementById(thinkingId).remove();
+                const errorHTML = `
+                    <div class="flex gap-3 items-start max-w-[85%]">
+                        <div class="w-8 h-8 rounded-xl bg-rose-600 text-white flex items-center justify-center font-extrabold text-xs shrink-0 shadow-sm">
+                            ⚠️
+                        </div>
+                        <div class="bg-rose-50 border border-rose-200 p-3.5 rounded-2xl text-xs leading-relaxed text-rose-800">
+                            <strong>蛤？阿虎的歷史課本突然掉到地上了！</strong><br>
+                            阿虎這邊網路太慢或伺服器正在打架（錯誤碼：${error.message}）。<br>
+                            要不要無情再試著發問一次，或者點擊下方熱門通識問題試試？
+                        </div>
+                    </div>
+                `;
+                chatArea.insertAdjacentHTML('beforeend', errorHTML);
+            }
+            setupChatScroll();
+        }
+
+        // CALL GEMINI TEXT GENERATION API WITH EXPONENTIAL BACKOFF
+        async function callGeminiWithRetry(userQuery, historyContext) {
+            // Build simple context string to inject recent memory for conversational depth
+            let contextPayload = "";
+            historyContext.forEach(msg => {
+                contextPayload += `${msg.role === "user" ? "問" : "答"}: ${msg.text}\n`;
+            });
+            contextPayload += `問: ${userQuery}`;
+
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            const payload = {
+                contents: [
+                    {
+                        parts: [
+                            { text: contextPayload }
+                        ]
+                    }
+                ],
+                systemInstruction: {
+                    parts: [
+                        { text: systemInstruction }
+                    ]
+                }
+            };
+
+            const maxRetries = 5;
+            let attempt = 0;
+
+            while (attempt < maxRetries) {
+                try {
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP status ${response.status}`);
+                    }
+
+                    const data = await response.json();
+                    const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                    if (text) {
+                        return text;
+                    } else {
+                        throw new Error("No response parts received");
+                    }
+
+                } catch (error) {
+                    attempt++;
+                    if (attempt >= maxRetries) {
+                        throw error;
+                    }
+                    // Exponential backoff delays: 1s, 2s, 4s, 8s, 16s
+                    const delay = Math.pow(2, attempt - 1) * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        }
+
+        // CLEAR CHAT HISTORY
+        function clearChatHistory() {
+            chatHistory = [];
+            const chatArea = document.getElementById("chatArea");
+            chatArea.innerHTML = `
+                <!-- Reset Chat Greeting -->
+                <div class="flex gap-3 items-start max-w-[85%]">
+                    <div class="w-8 h-8 rounded-xl bg-brand-500 text-notebook-slate flex items-center justify-center font-extrabold text-xs shrink-0 shadow-sm">
+                        虎
+                    </div>
+                    <div class="bg-white p-3.5 rounded-2xl shadow-sm border border-slate-200 text-sm leading-relaxed text-slate-700">
+                        無情重置成功！🐯<br>
+                        阿虎把通識課本拍乾淨了，大便酷妹還有什麼好笑的通識想聊聊？
+                    </div>
+                </div>
+            `;
+            setupChatScroll();
+        }
+    </script>
+</body>
+</html>
